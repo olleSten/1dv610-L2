@@ -1,0 +1,23 @@
+{
+  "name": "l2",
+  "version": "1.0.0",
+  "description": "A simple module for validating strings.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olleSten/1dv610-L2.git"
+  },
+  "author": "Olle Stenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olleSten/1dv610-L2/issues"
+  },
+  "homepage": "https://github.com/olleSten/1dv610-L2#readme",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
