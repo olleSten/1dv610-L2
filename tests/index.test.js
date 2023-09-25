@@ -90,6 +90,11 @@ const passwordTestValues = {
         },
 }
 
+const palindromeTestValues = {
+  'isPalindrome_emordnilaPsi': true,
+  'isNotPalindrome': false
+}
+
 
 Object.entries(emailTestValues).forEach(([key, value]) => {
   describe('\nEmail tests:', () => {
@@ -105,5 +110,12 @@ Object.entries(passwordTestValues).forEach(([key, value]) => {
       expect(validate.isPassword(key, value.arguments)).toBe(value.expected)
     })
   })
+})
 
+Object.entries(palindromeTestValues).forEach(([key, value]) => {
+  describe('\nPassword tests:', () => {
+    test(`Passing ${key} should return: ${value}`, () => {
+      expect(validate.isPalindrome(key)).toBe(value)
+    })
+  })
 })
