@@ -12,11 +12,15 @@ class ValidateString {
    
    for (let i = 0; i < characters.length; i++) {
     if (characters[i] === '@') {
-      if (i === 0) return false
+      if (i === 0) {
+        return false
+      }
   
       punctuationAndAts += '@'
     } else if (characters[i] === '.') {
-      if (i === characters.length - 1 || characters[i - 1] === '@') return false
+      if (i === characters.length - 1 || characters[i - 1] === '@') {
+        return false
+      }
   
       punctuationAndAts += '.'
     }
@@ -35,7 +39,9 @@ class ValidateString {
     const characters = string.split('')
   
     for (let i = 0; i < characters.length; i++) {
-      if (characters[i] !== characters[i].toLowerCase()) return true
+      if (characters[i] !== characters[i].toLowerCase()) {
+        return true
+      }
     }
     return false
   }
@@ -44,7 +50,9 @@ class ValidateString {
     const characters = string.split('')
   
     for (let i = 0; i < characters.length; i++) {
-      if (characters[i] !== characters[i].toUpperCase()) return true
+      if (characters[i] !== characters[i].toUpperCase()) {
+        return true
+      }
     }
     return false
   }
@@ -60,7 +68,9 @@ class ValidateString {
   
     characters.forEach(character => {
       numbers.forEach(number => {
-        if (parseInt(character) === number) hasNumber = true 
+        if (parseInt(character) === number) {
+          hasNumber = true
+        }
       })
     })
     return hasNumber
@@ -94,19 +104,25 @@ class ValidateString {
   
     if (mustHaveOneOf && mustHaveOneOf.length != 0) {
       mustHaveOneOf.forEach((character) => {
-        if (!password.includes(character)) isValid = false
+        if (!password.includes(character)) {
+          isValid = false
+        }
       })
     }
   
     if (cantHaveAnyOf && cantHaveAnyOf.length != 0) {
       cantHaveAnyOf.forEach((character) => {
-        if (password.includes(character)) isValid = false
+        if (password.includes(character)) {
+          isValid = false
+        }
       })
     }
   
     if (rainbowTable && rainbowTable.length != 0) {
       rainbowTable.forEach(easyPassword => {
-        if (password == easyPassword) isValid = false
+        if (password == easyPassword) {
+          isValid = false
+        }
       })
     }
   
@@ -131,12 +147,13 @@ class ValidateString {
   }
 
   isHexColor (hexColor) {
+    let isValid = true
+
     if (hexColor.length !== 7) {
       return false
     }
 
-    let isValid = true
-
+    
     if (hexColor[0] !== '#') {
       return false
     }
