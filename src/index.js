@@ -142,24 +142,26 @@ class ValidateString {
     }
 
     for (let i = 1; i < hexColor.length - 1; i++) {
-      if (
-        hexColor[i] !== '0' &&
-        hexColor[i] !== '1' &&
-        hexColor[i] !== '2' &&
-        hexColor[i] !== '3' &&
-        hexColor[i] !== '4' &&
-        hexColor[i] !== '5' &&
-        hexColor[i] !== '6' &&
-        hexColor[i] !== '7' &&
-        hexColor[i] !== '8' &&
-        hexColor[i] !== '9' &&
-        hexColor[i] !== 'A' &&
-        hexColor[i] !== 'B' &&
-        hexColor[i] !== 'C' &&
-        hexColor[i] !== 'D' &&
-        hexColor[i] !== 'E'
-      ) {
-        isValid = false
+      switch (hexColor[i]) {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case 'A':
+        case 'B':
+        case 'C':
+        case 'D':
+        case 'E':
+          break;
+        default:
+          isValid = false;
+          break;
       }
     }
 
