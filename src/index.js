@@ -4,7 +4,7 @@ class ValidateString {
 
   }
 
-  isEmail(email) {
+  isEmail (email) {
    const characters = email.split('')
   
    // store all @'s and .'s in a string so I can check the order after iterating over the string.
@@ -29,7 +29,7 @@ class ValidateString {
    }
   }
 
-  hasUppaerCase(string) {
+  hasUppaerCase (string) {
     // return string !== string.toLowerCase()
   
     const characters = string.split('')
@@ -40,7 +40,7 @@ class ValidateString {
     return false
   }
   
-  hasLowerCase(string) {
+  hasLowerCase (string) {
     const characters = string.split('')
   
     for (let i = 0; i < characters.length; i++) {
@@ -49,7 +49,7 @@ class ValidateString {
     return false
   }
   
-  containsNumber(string) {
+  containsNumber (string) {
     if (parseInt(string)) return true
   
     let hasNumber = false
@@ -107,11 +107,10 @@ class ValidateString {
     return isValid
   }
 
-  isPalindrome(string) {
+  isPalindrome (string) {
     let reverse = ''
     for (let i = string.length - 1; i >= 0; i--) {
-      reverse += string[i]
-      
+      reverse += string[i
     }
     return string === reverse
   }

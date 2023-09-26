@@ -75,19 +75,19 @@ const passwordTestValues = {
       expected: false,
     },
 
-        // uppercase character test
-        'PASSWORD$': {
-          arguments: {
-            mustHaveLowercase: true,
-          },
-          expected: false,
-        },
-        'pASSWORD$': {
-          arguments: {
-            mustHaveLowercase: true,
-          },
-          expected: true,
-        },
+    // uppercase character test
+    'PASSWORD$': {
+      arguments: {
+        mustHaveLowercase: true,
+      },
+      expected: false,
+    },
+    'pASSWORD$': {
+      arguments: {
+        mustHaveLowercase: true,
+      },
+      expected: true,
+    },
 }
 
 const palindromeTestValues = {
