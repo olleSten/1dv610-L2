@@ -95,6 +95,14 @@ const palindromeTestValues = {
   'isNotPalindrome': false
 }
 
+const whitespaceTestValues = {
+  ' \n': true,
+  ' \r': true,
+  ' \r\t': true,
+  'also has whitepsace': true,
+  'hasNoWhitespace': false
+}
+
 
 Object.entries(emailTestValues).forEach(([key, value]) => {
   describe('\nEmail tests:', () => {
@@ -116,6 +124,14 @@ Object.entries(palindromeTestValues).forEach(([key, value]) => {
   describe('\nPassword tests:', () => {
     test(`Passing ${key} should return: ${value}`, () => {
       expect(validate.isPalindrome(key)).toBe(value)
+    })
+  })
+})
+
+Object.entries(whitespaceTestValues).forEach(([key, value]) => {
+  describe('\nPassword tests:', () => {
+    test(`Passing ${key} should return: ${value}`, () => {
+      expect(validate.hasWhitespace(key)).toBe(value)
     })
   })
 })

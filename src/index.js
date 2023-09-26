@@ -77,11 +77,17 @@ class ValidateString {
       rainbowTable
     } = options;
   
-    if (!this.containsNumber(password) && mustHaveNumber) return false
+    if (!this.containsNumber(password) && mustHaveNumber) {
+      return false
+    } 
   
-    if (!this.hasUppaerCase(password) && mustHaveUppercase) return false
+    if (!this.hasUppaerCase(password) && mustHaveUppercase) {
+      return false
+    }
   
-    if (!this.hasLowerCase(password) && mustHaveLowercase) return false
+    if (!this.hasLowerCase(password) && mustHaveLowercase) {
+      return false
+    }
   
     // I cant retrun from inside the foreach loops so I use a variable to store the retult from the valudations and retrun it after they are done
     let isValid = true
@@ -110,9 +116,18 @@ class ValidateString {
   isPalindrome (string) {
     let reverse = ''
     for (let i = string.length - 1; i >= 0; i--) {
-      reverse += string[i
+      reverse += string[i]
     }
     return string === reverse
+  }
+
+  hasWhitespace (string) {
+    for (let i = 0; i < string.length - 1; i++) {
+      if (string[i] === ' ' || string[i] === '\n' || string[i] === '\r' || string[i] === '\t') {
+        return true 
+      }
+    }
+    return false
   }
 
 }
