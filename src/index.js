@@ -58,7 +58,9 @@ class ValidateString {
   }
   
   containsNumber (string) {
-    if (parseInt(string)) return true
+    if (parseInt(string)) {
+      return true
+    }
   
     let hasNumber = false
   
@@ -78,6 +80,7 @@ class ValidateString {
   
   isPassword(password, options) {
   
+    // Using an object to pass options to prevent potential errors due to parameter order mismatch.
     const {
       mustHaveNumber,
       mustHaveUppercase,
@@ -131,10 +134,16 @@ class ValidateString {
 
   isPalindrome (string) {
     let reverse = ''
+  
     for (let i = string.length - 1; i >= 0; i--) {
       reverse += string[i]
     }
-    return string === reverse
+    
+    if (string === reverse) {
+      return true
+    } else {
+      return false
+    }
   }
 
   hasWhitespace (string) {
@@ -184,7 +193,6 @@ class ValidateString {
 
     return isValid
   }
-
 }
 
 module.exports = {
