@@ -1,6 +1,7 @@
 {
-  "name": "l2",
+  "name": "validateString",
   "version": "1.0.0",
+  "main": "src/index.js",
   "description": "A simple module for validating strings.",
   "main": "src/index.js",
   "scripts": {

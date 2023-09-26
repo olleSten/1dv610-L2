@@ -12,7 +12,7 @@ This will execute the test suite and provide feedback on the correctness and fun
 
 #Example usecase of validating a password
 ```javascript
-  const { ValidateString } = require('./path/to/ValidateString');
+  const { ValidateString } = require('validateString');
   const validator = new ValidateString();
 
   const password = 'MySecurePassword123!';
