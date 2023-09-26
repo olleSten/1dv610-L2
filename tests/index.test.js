@@ -103,6 +103,12 @@ const whitespaceTestValues = {
   'hasNoWhitespace': false
 }
 
+const hexColorTestValues = {
+  '#EEEEEE': true,
+  'not A valid code': false,
+  '7longAB': false,
+  '#lOn4AB': false,
+}
 
 Object.entries(emailTestValues).forEach(([key, value]) => {
   describe('\nEmail tests:', () => {
@@ -132,6 +138,14 @@ Object.entries(whitespaceTestValues).forEach(([key, value]) => {
   describe('\nPassword tests:', () => {
     test(`Passing ${key} should return: ${value}`, () => {
       expect(validate.hasWhitespace(key)).toBe(value)
+    })
+  })
+})
+
+Object.entries(hexColorTestValues).forEach(([key, value]) => {
+  describe('\nPassword tests:', () => {
+    test(`Passing ${key} should return: ${value}`, () => {
+      expect(validate.isHexColor(key)).toBe(value)
     })
   })
 })

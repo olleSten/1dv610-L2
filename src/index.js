@@ -130,6 +130,42 @@ class ValidateString {
     return false
   }
 
+  isHexColor (hexColor) {
+    if (hexColor.length !== 7) {
+      return false
+    }
+
+    let isValid = true
+
+    if (hexColor[0] !== '#') {
+      return false
+    }
+
+    for (let i = 1; i < hexColor.length - 1; i++) {
+      if (
+        hexColor[i] !== '0' &&
+        hexColor[i] !== '1' &&
+        hexColor[i] !== '2' &&
+        hexColor[i] !== '3' &&
+        hexColor[i] !== '4' &&
+        hexColor[i] !== '5' &&
+        hexColor[i] !== '6' &&
+        hexColor[i] !== '7' &&
+        hexColor[i] !== '8' &&
+        hexColor[i] !== '9' &&
+        hexColor[i] !== 'A' &&
+        hexColor[i] !== 'B' &&
+        hexColor[i] !== 'C' &&
+        hexColor[i] !== 'D' &&
+        hexColor[i] !== 'E'
+      ) {
+        isValid = false
+      }
+    }
+
+    return isValid
+  }
+
 }
 
 module.exports = {
