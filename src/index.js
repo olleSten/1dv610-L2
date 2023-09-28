@@ -92,7 +92,7 @@ class ValidateString {
   
     if (!this.containsNumber(password) && mustHaveNumber) {
       return false
-    } 
+    }
   
     if (!this.hasUppaerCase(password) && mustHaveUppercase) {
       return false
@@ -102,7 +102,7 @@ class ValidateString {
       return false
     }
   
-    // I cant retrun from inside the foreach loops so I use a variable to store the retult from the valudations and retrun it after they are done
+    // cannot retrun from inside the foreach loops so a variable is used to store the retult from the valudations and retrun it after they are done
     let isValid = true
   
     if (mustHaveOneOf && mustHaveOneOf.length != 0) {
