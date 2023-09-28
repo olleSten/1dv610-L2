@@ -127,7 +127,7 @@ Object.entries(passwordTestValues).forEach(([key, value]) => {
 })
 
 Object.entries(palindromeTestValues).forEach(([key, value]) => {
-  describe('\nPassword tests:', () => {
+  describe('\nPalindrome tests:', () => {
     test(`Passing ${key} should return: ${value}`, () => {
       expect(validate.isPalindrome(key)).toBe(value)
     })
@@ -135,15 +135,15 @@ Object.entries(palindromeTestValues).forEach(([key, value]) => {
 })
 
 Object.entries(whitespaceTestValues).forEach(([key, value]) => {
-  describe('\nPassword tests:', () => {
-    test(`Passing ${key} should return: ${value}`, () => {
+  describe('\nWhitespace tests:', () => {
+    test(`Passing ${key.replace(/\n/g, '\\n').replace(/\r/g, '\\r').replace(/\t/g, '\\t')} should return: ${value}`, () => {
       expect(validate.hasWhitespace(key)).toBe(value)
     })
   })
 })
 
 Object.entries(hexColorTestValues).forEach(([key, value]) => {
-  describe('\nPassword tests:', () => {
+  describe('\nHex color tests:', () => {
     test(`Passing ${key} should return: ${value}`, () => {
       expect(validate.isHexColor(key)).toBe(value)
     })
