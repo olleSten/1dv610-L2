@@ -88,7 +88,7 @@ class ValidateString {
       mustHaveOneOf,
       cantHaveAnyOf,
       rainbowTable
-    } = options;
+    } = options
   
     if (!this.containsNumber(password) && mustHaveNumber) {
       return false
