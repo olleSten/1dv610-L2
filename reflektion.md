@@ -20,8 +20,9 @@ I myself thought that I had fairly good naming of most of my class, fuction and 
 | `containsNumber` | 16                         | **One level of abstraction per function:** This function is good because it only features one level of abstraction, is fairly short, and sticks to doing a single thing.    |
 | `isPalindrome` | 11                           | **Small:** This is the smallest of my mentioned methods, and the smaller the better.   |
 
-// todo: write Short reflection
+After reading chapter three in the course literature I realized that some of the code I had written in in the assignent broke some of the principles discussed. Mainly my "isEmail", "isHexColor" and "isPassword" methods break the principles for blocks of indenting. My `isEmail` method should be broken up into smaller function in order to reduce the number of nested if and for statements and the case is very similar with my `isPassword` method.
 
-##Kodreflektion
-// todo: write Short reflection about my own experiences from my own code quality.
+
+#Code reflection
+Overall the things I feel like I've learnt for this assignment is better naming. That its important to use one word per concept as decsribed by the **Pick one word per concept** principle. And that you should use words solution domain names beucase it makes it easier for other programmers to read and understand your code, and if there is none to use problem domain names. Something I learnt from the functions chapter was that you should keep your functions short as per the **small** principle described in the book if or for blocks should only contain a single line of code and if that code is a function call you minimize nesting and make the code easier to read and maintain.
 
