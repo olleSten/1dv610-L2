@@ -9,7 +9,7 @@
 | `cantHaveAnyOf`     | **Avoid disinformation:** "Of" does not specify what can't be had and doesn't add anything to the name.<br><br> **Use problem domain names:** A better name would be "blacklistedCharacters", as a programmer would understand what a blacklist is, and it specifies what isn't being allowed. The "s" also suggests that it is an array.  |
 | `ValidateString`   | **Class names:** This is the name of the module and the class that contains the methods. It's an appropriate name because it accurately describes the class's functionality.  |
  
-// todo: write Short reflection
+I myself thought that I had fairly good naming of most of my class, fuction and method names. Avoiding making meaningful distinctionsand trying to avoid disinformation. However upon further reflection I've found inconsistoncies in my naming, most notebly with the properties on the options parameter in the n "isPassword" method. These properties should all make greater use of the *Use problem domain names** principle to more effectively communicate their purpuse to the reader of the code. Upon analysing my  names I also found that I inconsistantly used "has" and "contains" interchangebly, this makes the methods harder to understand and in my case I think I sould only have used contains to more clearly convay the purpuse of these methods.
 
 ## Chapter 3: Functions
 | Name          | Lines (excluding whitespace) | Reflection   |
