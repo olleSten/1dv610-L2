@@ -184,10 +184,10 @@ class ValidateString {
         case 'C':
         case 'D':
         case 'E':
-          break;
+          break
         default:
-          isValid = false;
-          break;
+          isValid = false
+          break
       }
     }
 
