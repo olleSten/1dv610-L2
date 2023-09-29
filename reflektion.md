@@ -11,14 +11,14 @@
  
 // todo: write Short reflection
 
-##kapitel 3 Functions
+##Chapter 3 Functions
 | Name    | Lines (excluding ws) | reflection   |
 | -------- | -------   |  -------   |
-|  isPassword |    44     |         |
-| isHexColor    |  34  |         |
-| isEmail |   23   |         |
-| containsNumber    | 16   |         |
-| isPalindrome    |  11  |         |
+|  isPassword |    44     |   **Do one thing:** this rule is broken in this function, it does only validate if the passed string is a password however it contains does alot of checks based on the passed arguments, and these checks could be moved into seperate funtions to simplity and shorten the isPassword fucntion..  <br><br> **Argument objects:** The second argument to this function uses an object to pass arguments that is used to determain what ckecks the password has to pass, this is good because it recuces the number of arguments.     |
+| isHexColor    |  34  |    **Switch statements:** In this function a long switch satement is used to detairmain if the characters after the "#" in the string are valid hex characters.   |
+| isEmail |   23   |   **Blocks and indenting:**   This rule states that lines within if or for statements should only be one line long. isEmail features alot of for - if nesting and violates this rule, however this could be solved by rescructiring the code into other smaller functions.    |
+| containsNumber    | 16   |   **One level of abstraction per function:**  THis function is good ebcause it only features one level of abstraction is fairly short and sticks to doing a single thing.    |
+| isPalindrome    |  11  |    **Small:**  This is the smallest of my mentioned metods, and the smaller the better.   |
 
 // todo: write Short reflection
 
